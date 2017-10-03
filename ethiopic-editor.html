@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ethiopic Editor</title>
+<script src="ethiopicSeraImpl.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div>
+<form id="f">
+<!-- 
+<div id="editor-div-seleda" class="seleda"></div>
+<div><input type="text" id="editor-txt"  autocomplete="off" onkeydown="test(event)" /></div>
+-->
+<div class="seleda-header">
+<h1>የአማርኛ ፣ ትግርኛ ፣ አገውኛ ፣ ብሊንኛ ፣ ባስኬቶኛ ፣ ቤንችኛ... መጻፊያ ሰሌዳ።</h1>
+</div>
+<div><textarea id="geez-editor" onkeydown="return transliterate(event)" class="seleda"></textarea></div>
+<div><button onclick="document.getElementById('geez-editor').value = ''">Clear</button></div>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ethiopic Editor: An Implemetaion of SERA</title>
+<script>
+
+var buffer = ''
+var state = 0
+
+function clear() {
+    document.forms[0].elements['in'].value = ''
+}
+function transform(c) {
+    switch(c) {
+        case 'KeyA':
+            return 0x12A5;
+        case 'KeyB':
+            return 0x1265;
+        default:
+            return 0x1360;
+    }
+}
+function transliterate(event) {
+    //check state first. see if you need the previous keypress event.
+    let c = event.code
+    buffer += String.fromCharCode(transform(c))
+    let m = ''
+    if(document.forms[0].elements['et'].checked) {
+        if(event.ctrlKey) m = 'Ctrl + '
+        if(event.metaKey) m = 'Meta + '
+        document.getElementById('in').value = buffer;
+        return false
+    } else {
+        return true
+    }
+}
+</script>
+</head>
+<body>
+<form>
+<label><input type="checkbox" id="et" name="et" checked>&#x12A0;</label>
+<input type="text" id="in" name="in" onkeypress="return transliterate(event)" />
+<button onclick="clear()"/>Clear</button>
+</form>
+</body>
+</html>

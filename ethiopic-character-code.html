@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="et-unicode.js"></script>
+<script src="ethiopicSeraImpl.js"></script>
+<title>Ethiopic Character Codes.</title>
+</head>
+<body>
+<div id="container">
+<div id="body-1" class="body">
+	<div id="in-frm"  class="tools-div">
+		<form name="f" action="" onsubmit = "return showChar()">
+		<label>Enter Char Code (4629 - 5000):</label>
+		<input type="text" name="c"/><br>
+		<button type="submit">Show Character</button>
+		</form>
+	</div>
+	<div id="out" class="tools-div"></div>
+</div>
+<div id="body-2" class="body">
+<div class="tab-container">
+	<div class="tab">
+		<div class="col"><button class="tablinks" onclick="displayTabs(event, 'ethiopic-editor', 'tablinks', 'tabcontent')" id="default">Ethiopic Editor<br>exSERA</button></div>
+		<div class="col"><button class="tablinks" onclick="displayTabs(event, 'ethiopic', 'tablinks', 'tabcontent')">Ethiopic<br>0x1200 - 0x137f</button></div>
+		<div class="col"><button class="tablinks" onclick="displayTabs(event, 'supplement', 'tablinks', 'tabcontent')">Ethiopic Supplement<br>0x1380 - 0x139F</button></div>
+		<div class="col"><button class="tablinks" onclick="displayTabs(event, 'extended', 'tablinks', 'tabcontent')">Ethiopic Extended<br>0x2D80–0x2DDF</button></div>
+		<div class="col"><button class="tablinks" onclick="displayTabs(event, 'extended-a', 'tablinks', 'tabcontent')">Ethiopic Extended - A<br>0xAB00 - 0xAB2F</button></div>
+	</div>
+</div>
+	<div id="ethiopic" class="tabcontent">
+	<!-- 0x1200 - 0x137f -->
+	<script>writeTable(0x1200, 0x137f, 16)</script>
+	</div>
+	
+	<div id="supplement" class="tabcontent">
+	<!-- 0x1380 - 0x139F -->
+	<script>writeTable(0x1380, 0x139f, 16)</script>
+	</div>
+	
+	<div id="extended" class="tabcontent">
+	<!-- 0x2D80–0x2DDF -->
+	<script>writeTable(0x2d80, 0x2ddf, 16)</script>
+	</div>
+	
+	<div id="extended-a" class="tabcontent">
+	<!-- 0xAB00 - 0xAB2F -->
+	<script>writeTable(0xab00, 0xab2f, 16)</script>
+	</div>
+	<div id="ethiopic-editor" class="tabcontent">
+		<form id="f">
+		<!-- 
+		<div id="editor-div-seleda" class="seleda"></div>
+		<div><input type="text" id="editor-txt"  autocomplete="off" onkeydown="test(event)" /></div>
+		-->
+		<div class="seleda-header">
+		<h1>የአማርኛ ፣ ትግርኛ ፣ አገውኛ ፣ ብሊንኛ ፣ ባስኬቶኛ ፣ ቤንችኛ... መጻፊያ ሰሌዳ።</h1>
+		</div>
+		<div><textarea id="geez-editor" onkeydown="return transliterate(event)" class="seleda"></textarea></div>
+		<div><button onclick="return clearContent(event, 'geez-editor', 'default')">Clear</button></div>
+		</form>
+	</div>
+</div>
+</div>
+<script>document.getElementById('default').click()</script>
+</body>
+</html>

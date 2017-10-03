@@ -1,0 +1,513 @@
+<pre>
+Table of contents for Speech and language processing : an introduction to natural language processing, computational linguistics, and speech recognition / Daniel Jurafsky and James H. Martin.
+
+Bibliographic record and links to related information available from the Library of Congress catalog.
+
+Note: Contents data are machine generated based on pre-publication provided by the publisher. Contents may have variations from the printed book or be incomplete or contain other coding.
+Counter
+
+Contents 
+Preface xxiii 
+1 Introduction 1 
+1.1 Knowledge in Speech and Language Processing . . . . . . . . . . . 2 
+1.2 Ambiguity ............................... 4
+1.3 ModelsandAlgorithms ........................ 5
+1.4 Language,Thought,andUnderstanding. . . . . . . . . . . . . . . . 6 
+1.5 TheStateoftheArt .......................... 8
+1.6 SomeBriefHistory .......................... 9
+1.6.1 Foundational Insights: 1940s and 1950s . . . . . . . . . . . 9 
+1.6.2 TheTwoCamps:1957/1970................. 10
+1.6.3 FourParadigms:1970/1983 ................. 11
+1.6.4 Empiricism and Finite State Models Redux: 1983/1993 . . 12 
+1.6.5 The Field Comes Together: 1994/1999 . . . . . . . . . . . 12 
+1.6.6 The Rise of Machine Learning: 2000/2007 . . . . . . . . . 13 
+1.6.7 OnMultipleDiscoveries ................... 13
+1.6.8 AFinalBriefNoteonPsychology . . . . . . . . . . . . . . 14 
+1.7 Summary................................ 15
+BibliographicalandHistoricalNotes ..................... 15
+I Words 
+2 Regular Expressions and Automata 17 
+2.1 RegularExpressions .......................... 17
+2.1.1 Basic Regular Expression Patterns . . . . . . . . . . . . . . 18 
+2.1.2 Disjunction, Grouping, and Precedence . . . . . . . . . . . 21 
+2.1.3 ASimpleExample ...................... 22
+xiii 
+2.1.4 AMoreComplexExample.................. 23
+2.1.5 AdvancedOperators ..................... 24
+2.1.6 Regular Expression Substitution, Memory, and ELIZA . . . 25 
+2.2 Finite-StateAutomata ......................... 26
+2.2.1 UsinganFSAtoRecognizeSheeptalk. . . . . . . . . . . . 26 
+2.2.2 FormalLanguages ...................... 30
+2.2.3 AnotherExample....................... 31
+2.2.4 Non-DeterministicFSAs ................... 32
+2.2.5 UsinganNFSAtoAcceptStrings . . . . . . . . . . . . . . 33 
+2.2.6 RecognitionasSearch .................... 35
+2.2.7 Relating Deterministic and Non-Deterministic Automata . . 38 
+2.3 RegularLanguagesandFSAs ..................... 38
+2.4 Summary................................ 40
+BibliographicalandHistoricalNotes ..................... 42
+Exercises ................................... 42
+3 Words & Transducers 45 
+3.1 Surveyof(Mostly)EnglishMorphology . . . . . . . . . . . . . . . 47 
+3.1.1 In-ectionalMorphology ................... 48
+3.1.2 DerivationalMorphology................... 50
+3.1.3 Cliticization.......................... 51
+3.1.4 Non-concatenative Morphology . . . . . . . . . . . . . . . 52 
+3.1.5 Agreement .......................... 52
+3.2 Finite-StateMorphologicalParsing . . . . . . . . . . . . . . . . . . 53 
+3.3 BuildingaFinite-StateLexicon .................... 54
+3.4 Finite-StateTransducers........................ 57
+3.4.1 Sequential Transducers and Determinism . . . . . . . . . . 59 
+3.5 FSTsforMorphologicalParsing ................... 60
+3.6 TransducersandOrthographicRules . . . . . . . . . . . . . . . . . 63 
+3.7 CombiningFSTLexiconandRules .................. 65
+3.8 Lexicon-FreeFSTs:ThePorterStemmer . . . . . . . . . . . . . . . 68 
+3.9 WordandSentenceTokenization ................... 69
+3.9.1 SegmentationinChinese ................... 70
+3.10 Detecting and Correcting Spelling Errors . . . . . . . . . . . . . . . 72 
+3.11 MinimumEditDistance ........................ 74
+3.12 HumanMorphologicalProcessing . . . . . . . . . . . . . . . . . . 77 
+3.13 Summary................................ 79
+BibliographicalandHistoricalNotes ..................... 80
+Exercises ................................... 81
+4 N-grams 83 
+4.1 CountingWordsinCorpora ...................... 84
+4.2 Simple (Unsmoothed) N-grams .................... 86
+4.3 TrainingandTestSets ......................... 91
+4.3.1 N-gram Sensitivity to the Training Corpus . . . . . . . . . . 92 
+4.3.2 Unknown Words: Open versus closed vocabulary tasks . . . 94 
+4.4 Evaluating N-grams:Perplexity .................... 95
+4.5 Smoothing ............................... 97
+4.5.1 LaplaceSmoothing...................... 98
+4.5.2 Good-TuringDiscounting .................. 101
+4.5.3 Some advanced issues in Good-Turing estimation . . . . . . 102 
+4.6 Interpolation .............................. 103
+4.7 Backoff................................. 105
+4.7.1 Advanced: Details of computing Katz backoff - and P* . . 106 
+4.8 Practical Issues: Toolkits and Data Formats . . . . . . . . . . . . . . 107 
+4.9 AdvancedIssuesinLanguageModeling . . . . . . . . . . . . . . . 109 4.9.1 Advanced Smoothing Methods: Kneser-Ney Smoothing . . 109 
+4.9.2 Class-basedN-grams..................... 111
+4.9.3 Language Model Adaptation and Using the Web . . . . . . 111 
+4.9.4 Using Longer Distance Information: A Brief Summary . . . 112 
+4.10 Advanced: Information Theory Background . . . . . . . . . . . . . 113 
+4.10.1 Cross-Entropy for Comparing Models . . . . . . . . . . . . 116 
+4.11 Advanced: The Entropy of English and Entropy Rate Constancy . . 117 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 119 
+4.12 Summary................................ 120
+Exercises ................................... 121
+5 Part-of-Speech Tagging 123 
+5.1 (Mostly)EnglishWordClasses .................... 124
+5.2 TagsetsforEnglish........................... 130
+5.3 Part-of-SpeechTagging ........................ 133
+5.4 Rule-BasedPart-of-SpeechTagging. . . . . . . . . . . . . . . . . . 137 
+5.5 HMMPart-of-SpeechTagging .................... 139
+5.5.1 Computing the most-likely tag sequence: An example . . . 142 
+5.5.2 Formalizing Hidden Markov Model taggers . . . . . . . . . 144 
+5.5.3 The Viterbi Algorithm for HMM Tagging . . . . . . . . . . 145 
+5.5.4 Extending the HMM algorithm to trigrams . . . . . . . . . 149 
+5.6 Transformation-BasedTagging .................... 151
+5.6.1 HowTBLRulesAreApplied ................ 152
+5.6.2 HowTBLRulesAreLearned ................ 152
+5.7 EvaluationandErrorAnalysis..................... 153
+5.7.1 ErrorAnalysis ........................ 156
+5.8 Advanced Issues in Part-of-Speech Tagging . . . . . . . . . . . . . 157 
+5.8.1 Practical Issues: Tag Indeterminacy and Tokenization . . . . 157 
+5.8.2 UnknownWords ....................... 158
+5.8.3 Part-of-Speech Tagging for Other Languages . . . . . . . . 160 
+5.8.4 CombiningTaggers...................... 163
+5.9 Advanced: The Noisy Channel Model for Spelling . . . . . . . . . . 163 
+5.9.1 Contextual Spelling Error Correction . . . . . . . . . . . . 167 
+5.10 Summary................................ 168 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 169 Exercises ................................... 171 
+6 Hidden Markov and Maximum Entropy Models 173 
+6.1 MarkovChains............................. 174
+6.2 TheHiddenMarkovModel ...................... 177
+6.3 Computing Likelihood: The Forward Algorithm . . . . . . . . . . . 179 
+6.4 Decoding:TheViterbiAlgorithm ................... 184
+6.5 Training HMMs: The Forward-Backward Algorithm . . . . . . . . . 187 
+6.6 Maximum Entropy Models: Background . . . . . . . . . . . . . . . 193 
+6.6.1 LinearRegression ...................... 194
+6.6.2 Logisticregression ...................... 197
+6.6.3 Logistic regression: Classi-cation . . . . . . . . . . . . . . 199 
+6.6.4 Advanced: Learning in logistic regression . . . . . . . . . . 200 
+6.7 MaximumEntropyModeling ..................... 201
+6.7.1 WhydowecallitMaximumEntropy?. . . . . . . . . . . . 205 
+6.8 MaximumEntropyMarkovModels.................. 207
+6.8.1 DecodingandLearninginMEMMs . . . . . . . . . . . . . 210 
+6.9 Summary................................ 212 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 212 
+II Speech 
+7 Phonetics 215 
+7.1 Speech Sounds and Phonetic Transcription . . . . . . . . . . . . . . 216 
+7.2 ArticulatoryPhonetics......................... 218
+7.2.1 TheVocalOrgans....................... 218
+7.2.2 Consonants: Place of Articulation . . . . . . . . . . . . . . 220 
+7.2.3 Consonants: Manner of Articulation . . . . . . . . . . . . . 221 
+7.2.4 Vowels ............................ 222
+7.3 Phonological Categories and Pronunciation Variation . . . . . . . . 225 
+7.3.1 PhoneticFeatures....................... 227
+7.3.2 PredictingPhoneticVariation . . . . . . . . . . . . . . . . 228 
+7.3.3 Factors In-uencing Phonetic Variation . . . . . . . . . . . . 229 
+7.4 AcousticPhoneticsandSignals .................... 230
+7.4.1 Waves............................. 231
+7.4.2 SpeechSoundWaves..................... 231
+7.4.3 Frequency and Amplitude; Pitch and Loudness . . . . . . . 233 
+7.4.4 Interpreting Phones from a Waveform . . . . . . . . . . . . 236 
+7.4.5 SpectraandtheFrequencyDomain . . . . . . . . . . . . . 236 
+7.4.6 TheSource-FilterModel ................... 241
+7.5 PhoneticResources .......................... 241
+7.6 Advanced: Articulatory and Gestural Phonology . . . . . . . . . . . 244 
+7.7 Summary................................ 245 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 246 Exercises ................................... 247 
+8 Speech Synthesis 249 
+8.1 TextNormalization .......................... 250
+8.1.1 SentenceTokenization .................... 251
+8.1.2 Non-StandardWords ..................... 253
+8.1.3 HomographDisambiguation ................. 256
+8.2 PhoneticAnalysis ........................... 257
+8.2.1 DictionaryLookup ...................... 258
+8.2.2 Names ............................ 259
+8.2.3 Grapheme-to-Phoneme.................... 259
+8.3 ProsodicAnalysis ........................... 263
+8.3.1 ProsodicStructure ...................... 263
+8.3.2 Prosodicprominence ..................... 264
+8.3.3 Tune ............................. 267
+8.3.4 More sophisticated models: ToBI . . . . . . . . . . . . . . 267 
+8.3.5 Computing duration from prosodic labels . . . . . . . . . . 270 
+8.3.6 Computing F0 from prosodic labels . . . . . . . . . . . . . 271 
+8.3.7 Final result of text analysis: Internal Representation . . . . 272 
+8.4 DiphoneWaveformsynthesis ..................... 273
+8.4.1 Buildingadiphonedatabase ................. 274
+8.4.2 Diphone concatenation and TD-PSOLA for prosody . . . . 275 
+8.5 UnitSelection(Waveform)Synthesis . . . . . . . . . . . . . . . . . 278 
+8.6 Evaluation ............................... 282 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 283 Exercises ................................... 285 
+9 Automatic Speech Recognition 287 
+9.1 SpeechRecognitionArchitecture ................... 289
+9.2 Applying the Hidden Markov Model to Speech . . . . . . . . . . . . 293 
+9.3 FeatureExtraction:MFCCvectors . . . . . . . . . . . . . . . . . . 297 
+9.3.1 Preemphasis ......................... 298
+9.3.2 Windowing .......................... 298
+9.3.3   DiscreteFourierTransform. . . . . . . . . . . . . . . . . . 300 
+9.3.4   Mel-lterbankandlog .................... 301
+9.3.5   The Cepstrum: Inverse Discrete Fourier Transform . . . . . 302 
+9.3.6   DeltasandEnergy ...................... 304
+9.3.7   Summary:MFCC ...................... 304
+9.4 ComputingAcousticLikelihoods ................... 305
+9.4.1   VectorQuantization ..................... 305
+9.4.2   GaussianPDFs ........................ 308
+9.4.3   Probabilities, log probabilities and distance functions . . . . 315 
+9.5 TheLexiconandLanguageModel .................. 316
+9.6 SearchandDecoding ......................... 316
+9.7 EmbeddedTraining .......................... 326
+9.8 Evaluation:WordErrorRate ..................... 330
+9.9 Summary................................ 332 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 333 Exercises ................................... 336 
+10 Speech Recognition: Advanced Topics  337 
+10.1 Multipass Decoding: N-bestlistsandlattices . . . . . . . . . . . . . 338 
+10.2 A* ('Stack')Decoding......................... 343
+10.3 Context-Dependent Acoustic Models: Triphones . . . . . . . . . . . 347 
+10.4 DiscriminativeTraining ........................ 351
+10.4.1  Maximum Mutual Information Estimation . . . . . . . . . . 352 
+10.4.2  Acoustic Models based on Posterior Classi-ers . . . . . . . 354 
+10.5 ModelingVariation .......................... 355
+10.5.1  Environmental Variation and Noise . . . . . . . . . . . . . 355 
+10.5.2  Speaker and Dialect Adaptation: Variation due to speaker differences .......................... 356 10.5.3 Pronunciation Modeling: Variation due to Genre . . . . . . 357 
+10.6 Metadata: Boundaries, Punctuation, and Dis-uencies . . . . . . . . 359 
+10.7 SpeechRecognitionbyHumans.................... 361
+10.8 Summary................................ 363 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 363 Exercises ................................... 364 
+11 Computational Phonology 365 
+11.1 Finite-StatePhonology ........................ 365
+11.2 AdvancedFinite-StatePhonology . . . . . . . . . . . . . . . . . . . 369 
+11.2.1 Harmony ........................... 369
+11.2.2 TemplaticMorphology .................... 370
+11.3 ComputationalOptimalityTheory. . . . . . . . . . . . . . . . . . . 371 
+11.3.1 Finite-State Transducer Models of Optimality Theory . . . . 373 
+11.3.2 Stochastic Models of Optimality Theory . . . . . . . . . . . 375 
+11.4 Syllabi-cation ............................. 376
+11.5 LearningPhonology&Morphology . . . . . . . . . . . . . . . . . 380 
+11.5.1 LearningPhonologicalRules. . . . . . . . . . . . . . . . . 380 
+11.5.2 LearningMorphology .................... 381
+11.5.3 LearninginOptimalityTheory. . . . . . . . . . . . . . . . 385 
+11.6 Summary................................ 386 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 386 Exercises ................................... 388 
+III Syntax 
+12 Formal Grammars of English 389 
+12.1 Constituency.............................. 390
+12.2 Context-FreeGrammars ........................ 391
+12.2.1 Formal de-nition of context-free grammar . . . . . . . . . 395 
+12.3 SomeGrammarRulesforEnglish. . . . . . . . . . . . . . . . . . . 396 
+12.3.1 Sentence-Level Constructions . . . . . . . . . . . . . . . . 396 
+12.3.2 ClausesandSentences .................... 398
+12.3.3 TheNounPhrase ....................... 398
+12.3.4 Agreement .......................... 403
+12.3.5 The Verb Phrase and Subcategorization . . . . . . . . . . . 404 
+12.3.6 Auxiliaries .......................... 406
+12.3.7 Coordination ......................... 407
+12.4 Treebanks ............................... 408
+12.4.1 Example: The Penn Treebank Project . . . . . . . . . . . . 408 
+12.4.2 UsingaTreebankasaGrammar . . . . . . . . . . . . . . . 410 
+12.4.3 SearchingTreebanks ..................... 412
+12.4.4 HeadsandHeadFinding ................... 413
+12.5 GrammarEquivalenceandNormalForm . . . . . . . . . . . . . . . 416 
+12.6 Finite-State and Context-Free Grammars . . . . . . . . . . . . . . . 417 
+12.7 DependencyGrammars ........................ 418
+12.7.1 The Relationship Between Dependencies and Heads . . . . 419 
+12.7.2 CategorialGrammar ..................... 420
+12.8 SpokenLanguageSyntax ....................... 421
+12.8.1 Dis-uenciesandRepair ................... 422
+12.8.2 TreebanksforSpokenLanguage . . . . . . . . . . . . . . . 423 
+12.9 GrammarsandHumanProcessing. . . . . . . . . . . . . . . . . . . 423 
+12.10Summary................................ 425 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 426 Exercises ................................... 428 
+13 Parsing with Context-Free Grammars 431 
+13.1 ParsingasSearch ........................... 432
+13.1.1  Top-DownParsing ...................... 433
+13.1.2  Bottom-UpParsing...................... 434
+13.1.3  Comparing Top-Down and Bottom-Up Parsing . . . . . . . 435 
+13.2 Ambiguity ............................... 436
+13.3 SearchintheFaceofAmbiguity ................... 438
+13.4 Dynamic Programming Parsing Methods . . . . . . . . . . . . . . . 439 
+13.4.1  CKYParsing ......................... 440
+13.4.2  TheEarleyAlgorithm .................... 447
+13.4.3  ChartParsing ......................... 452
+13.5 PartialParsing ............................. 454
+13.5.1  Finite-State Rule-Based Chunking . . . . . . . . . . . . . . 455 
+13.5.2  Machine Learning-Based Approaches to Chunking . . . . . 456 
+13.5.3  EvaluatingChunkingSystems . . . . . . . . . . . . . . . . 459 
+13.6 Summary................................ 460 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 461 Exercises ................................... 462 
+14 Statistical Parsing  465 
+14.1 Probabilistic Context-Free Grammars . . . . . . . . . . . . . . . . . 466 
+14.1.1  PCFGsforDisambiguation.................. 467
+14.1.2  PCFGsforLanguageModeling . . . . . . . . . . . . . . . 469 
+14.2 ProbabilisticCKYParsingofPCFGs . . . . . . . . . . . . . . . . . 470 
+14.3 LearningPCFGRuleProbabilities . . . . . . . . . . . . . . . . . . 473 
+14.4 ProblemswithPCFGs ......................... 474
+14.4.1  Independence assumptions miss structural dependencies betweenrules .......................... 474 
+14.4.2  Lack of sensitivity to lexical dependencies . . . . . . . . . 475 14.5 Improving PCFGs by Splitting and Merging Nonterminals . . . . . . 477 
+14.6 ProbabilisticLexicalizedCFGs .................... 479
+14.6.1 TheCollinsParser ...................... 481
+14.6.2 Advanced: Further Details of the Collins Parser . . . . . . . 483 
+14.7 EvaluatingParsers ........................... 485
+14.8 Advanced: Discriminative Reranking . . . . . . . . . . . . . . . . . 486 
+14.9 Advanced: Parser-Based Language Modeling . . . . . . . . . . . . . 488 
+14.10HumanParsing............................. 489
+14.11Summary................................ 491 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 492 Exercises ................................... 494 
+15 Features and Uni-cation 495 
+15.1 FeatureStructures ........................... 496
+15.2 Uni-cationofFeatureStructures . . . . . . . . . . . . . . . . . . . 499 
+15.3 FeatureStructuresintheGrammar . . . . . . . . . . . . . . . . . . 503 
+15.3.1 Agreement .......................... 504
+15.3.2 HeadFeatures ........................ 507
+15.3.3 Subcategorization ...................... 508
+15.3.4 Long-Distance Dependencies . . . . . . . . . . . . . . . . 513 
+15.4 ImplementingUni-cation ....................... 513
+15.4.1 Uni-cationDataStructures. . . . . . . . . . . . . . . . . . 514 
+15.4.2 TheUni-cationAlgorithm .................. 515
+15.5 Parsing with Uni-cation Constraints . . . . . . . . . . . . . . . . . 519 
+15.5.1 Integrating Uni-cation into an Earley Parser . . . . . . . . 520 
+15.5.2 Uni-cation-BasedParsing .................. 526
+15.6 TypesandInheritance ......................... 528
+15.6.1 Advanced: Extensions to Typing . . . . . . . . . . . . . . 531 15.6.2 Other Extensions to Uni-cation . . . . . . . . . . . . . . . 532 
+15.7 Summary................................ 532 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 533 Exercises ................................... 534 
+16 Language and Complexity 537 
+16.1 TheChomskyHierarchy........................ 538
+16.2 HowtoTellifaLanguageIsn'tRegular . . . . . . . . . . . . . . . 540 
+16.2.1 ThePumpingLemma .................... 541
+16.2.2 Are English and Other Natural Languages Regular Languages?543 
+16.3 IsNaturalLanguageContext-Free? . . . . . . . . . . . . . . . . . . 546 
+16.4 ComplexityandHumanProcessing . . . . . . . . . . . . . . . . . . 548 
+16.5 Summary................................ 550 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 551 Exercises ................................... 552 
+IV Semantics and Pragmatics 
+17 Representing Meaning 553 
+17.1 Computational Desiderata for Representations . . . . . . . . . . . . 555 
+17.1.1 Veri-ability.......................... 555
+17.1.2 Unambiguous Representations . . . . . . . . . . . . . . . . 556 
+17.1.3 CanonicalForm ....................... 557
+17.1.4 InferenceandVariables.................... 559
+17.1.5 Expressiveness ........................ 559
+17.2 Model-TheoreticSemantics ...................... 560
+17.3 First-OrderLogic ........................... 563
+17.3.1 Basic Elements of First Order Logic . . . . . . . . . . . . . 563 
+17.3.2 VariablesandQuanti-ers................... 566
+17.3.3 LambdaNotation....................... 568
+17.3.4 The Semantics of First-Order Logic . . . . . . . . . . . . . 569 
+17.3.5 Inference ........................... 570
+17.4 RepresentingEventsandStates .................... 572
+17.4.1 RepresentingTime ...................... 575
+17.4.2 Aspect ............................ 578
+17.5 Related Representational Approaches . . . . . . . . . . . . . . . . . 581 
+17.5.1 DescriptionLogics ...................... 582
+17.6 AlternativeApproachestoMeaning. . . . . . . . . . . . . . . . . . 587 
+17.6.1 MeaningasAction ...................... 588
+17.7 Summary................................ 588 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 589 Exercises ................................... 590 
+18 Computational Semantics 593 
+18.1 Syntax-DrivenSemanticAnalysis . . . . . . . . . . . . . . . . . . . 593 
+18.2 Semantic Augmentations to Context-Free Grammar Rules . . . . . . 595 
+18.3 Quanti-er Scope Ambiguity and Underspeci-cation . . . . . . . . . 602 
+18.3.1 StoreandRetrieveApproaches. . . . . . . . . . . . . . . . 602 
+18.4 Uni-cation-Based Approaches to Semantic Analysis . . . . . . . . . 604 
+18.5 Semantic Attachments for a Fragment of English . . . . . . . . . . . 610 
+18.5.1 Sentences ........................... 610
+18.5.2 NounPhrases ......................... 612
+18.5.3 VerbPhrases ......................... 615
+18.5.4 PrepositionalPhrases..................... 617
+18.6 Integrating Semantics into the Earley Parser . . . . . . . . . . . . . 619 
+18.7 IdiomsandCompositionality ..................... 621
+18.8 Summary................................ 622
+BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 623 Exercises ................................... 624 
+19 Lexical Semantics 627 
+19.1 WordSenses .............................. 628
+19.2 RelationsbetweenSenses ....................... 631
+19.2.1 SynonymyandAntonymy .................. 631
+19.2.2 Hyponymy .......................... 632
+19.2.3 SemanticFields........................ 633
+19.3 WordNet: A Database of Lexical Relations . . . . . . . . . . . . . . 633 
+19.4 Event Participants: Semantic Roles and Selectional Restrictions . . . 635 
+19.4.1 ThematicRoles........................ 636
+19.4.2 DiathesisAlternations .................... 637
+19.4.3 ProblemswithThematicRoles . . . . . . . . . . . . . . . . 639 
+19.4.4 ThePropositionBank .................... 640
+19.4.5 FrameNet ........................... 641
+19.4.6 SelectionalRestrictions ................... 643
+19.5 PrimitiveDecomposition ....................... 645
+19.6 Advancedconcepts:Metaphor .................... 647
+19.7 Summary................................ 648 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 649 Exercises ................................... 650 
+20 Computational Lexical Semantics 653 
+20.1 Word Sense Disambiguation: Overview . . . . . . . . . . . . . . . . 654 
+20.2 Supervised Word Sense Disambiguation . . . . . . . . . . . . . . . 655 
+20.2.1 Extracting Feature Vectors for Supervised Learning . . . . . 656 
+20.2.2 Naive Bayes and Decision List Classi-ers . . . . . . . . . . 657 
+20.3 WSD Evaluation, Baselines, and Ceilings . . . . . . . . . . . . . . . 660 20.4 WSD: Dictionary and Thesaurus Methods . . . . . . . . . . . . . . 662 
+20.4.1 TheLeskAlgorithm ..................... 662
+20.4.2 Selectional Restrictions and Selectional Preferences . . . . 664 
+20.5 Minimally Supervised WSD: Bootstrapping . . . . . . . . . . . . . 666 
+20.6 WordSimilarity:ThesaurusMethods . . . . . . . . . . . . . . . . . 668 
+20.7 Word Similarity: Distributional Methods . . . . . . . . . . . . . . . 674 
+20.7.1 De-ning a Word's Co-occurrence Vectors . . . . . . . . . . 675 
+20.7.2 Measures of Association with Context . . . . . . . . . . . . 676 
+20.7.3 De-ning similarity between two vectors . . . . . . . . . . . 679 
+20.7.4 Evaluating Distributional Word Similarity . . . . . . . . . . 683 
+20.8 Hyponymyandotherwordrelations . . . . . . . . . . . . . . . . . 684 
+20.9 SemanticRoleLabeling ........................ 687
+20.10 Advanced: Unsupervised Sense Disambiguation . . . . . . . . . . . 690 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 691 Exercises ................................... 695 
+21 Computational Discourse 697 
+21.1 DiscourseSegmentation ........................ 700
+21.1.1 Unsupervised Discourse Segmentation . . . . . . . . . . . 700 
+21.1.2 Supervised Discourse Segmentation . . . . . . . . . . . . . 702 
+21.1.3 Evaluating Discourse Segmentation . . . . . . . . . . . . . 704 
+21.2 TextCoherence ............................ 705
+21.2.1 RhetoricalStructureTheory . . . . . . . . . . . . . . . . . 706 
+21.2.2 Automatic Coherence Assignment . . . . . . . . . . . . . . 708 
+21.3 ReferenceResolution ......................... 711
+21.4 ReferencePhenomena ......................... 714
+21.4.1 Five Types of Referring Expressions . . . . . . . . . . . . . 714 
+21.4.2 InformationStatus ...................... 716
+21.5 Features for Pronominal Anaphora Resolution . . . . . . . . . . . . 717 
+21.6 Three algorithms for pronominal anaphora resolution . . . . . . . . 720 
+21.6.1 Pronominal Anaphora Baseline: The Hobbs Algorithm . . 720 
+21.6.2 A Centering Algorithm for Anaphora Resolution . . . . . . 722 
+21.6.3 A Log-Linear model for Pronominal Anaphora Resoluton . 724 
+21.6.4 Features............................ 725
+21.7 CoreferenceResolution ........................ 726
+21.8 EvaluatingCoreferenceResolution . . . . . . . . . . . . . . . . . . 728 
+21.9 Advanced: Inference-Based Coherence Resolution . . . . . . . . . . 728 
+21.10 Psycholinguistic Studies of Reference and Coherence . . . . . . . . 734 
+21.11Summary................................ 735 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 736 Exercises ................................... 738 
+V Applications 
+22 Information Extraction 741 
+22.1 NamedEntityRecognition ...................... 743
+22.1.1 Ambiguity in Named Entity Recognition . . . . . . . . . . 745 
+22.1.2 NERasSequenceLabeling ................. 745
+22.1.3 Evaluating Named Entity Recognition . . . . . . . . . . . . 749 
+22.1.4 PracticalNERArchitectures . . . . . . . . . . . . . . . . . 750 
+22.2 Relation Detection and Classi-cation . . . . . . . . . . . . . . . . . 751 
+22.2.1 Supervised Learning Approaches to Relation Analysis . . . 752 
+22.2.2 Lightly Supervised Approaches to Relation Analysis . . . . 755 
+22.2.3 Evaluating Relation Analysis Systems . . . . . . . . . . . . 758 
+22.3 TemporalandEventProcessing .................... 759
+22.3.1 Temporal Expression Recognition . . . . . . . . . . . . . . 760 
+22.3.2 TemporalNormalization ................... 762
+22.3.3 EventDetectionandAnalysis . . . . . . . . . . . . . . . . 765 
+22.3.4 TimeBank........................... 766
+22.4 Template-Filling ............................ 768
+22.4.1 Statistical Approaches to Template-Filling . . . . . . . . . 769 
+22.4.2 Finite-State Template-Filling Systems . . . . . . . . . . . . 770 
+22.5 Advanced: Biomedical Information Extraction * ........... 773
+22.5.1 Biological Named Entity Recognition . . . . . . . . . . . . 774 
+22.5.2 GeneNormalization ..................... 775
+22.5.3 BiologicalRolesandRelations. . . . . . . . . . . . . . . . 776 
+22.6 Summary................................ 778 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 778 Exercises ................................... 779 
+23 Question Answering and Summarization 783 
+23.1 InformationRetrieval ......................... 785
+23.1.1 TheVectorSpaceModel ................... 786
+23.1.2 TermWeighting ....................... 789
+23.1.3 TermSelectionandCreation . . . . . . . . . . . . . . . . . 790 
+23.1.4 Evaluating Information Retrieval Systems . . . . . . . . . . 790 
+23.1.5 Homonymy, Polysemy, and Synonymy . . . . . . . . . . . 794 
+23.1.6 ImprovingUserQueries ................... 795
+23.2 FactoidQuestionAnswering ..................... 796
+23.2.1 QuestionProcessing ..................... 798
+23.2.2 PassageRetrieval ....................... 801
+23.2.3 AnswerProcessing ...................... 802
+23.2.4 EvaluationofFactoidAnswers . . . . . . . . . . . . . . . . 805 
+23.3 Summarization............................. 805
+23.3.1 Summarizing Single Documents . . . . . . . . . . . . . . . 808 
+23.4 Multi-DocumentSummarization ................... 814
+23.4.1 Content Selection in Multi-Document Summarization . . . 815 
+23.4.2 Information Ordering in Multi-Document Summarization . 816 
+23.5    Between Question Answering and Summarization: Query-Focused Summarization............................. 819 
+23.6    SummarizationEvaluation....................... 823
+23.7 Summary................................ 825 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 826 Exercises ................................... 828 
+24 Dialogue and Conversational Agents   829 
+24.1 PropertiesofHumanConversations . . . . . . . . . . . . . . . . . . 831 
+24.1.1 TurnsandTurn-Taking .................... 832
+24.1.2 LanguageasAction:SpeechActs . . . . . . . . . . . . . . 833 
+24.1.3 Language as Joint Action: Grounding . . . . . . . . . . . . 834 
+24.1.4 ConversationalStructure ................... 836
+24.1.5 ConversationalImplicature. . . . . . . . . . . . . . . . . . 837 
+24.2 BasicDialogueSystems ........................ 839
+24.2.1 ASRcomponent ....................... 839
+24.2.2 NLUcomponent ....................... 841
+24.2.3 GenerationandTTScomponents . . . . . . . . . . . . . . 844 
+24.2.4 DialogueManager ...................... 845
+24.2.5 Dialogue Manager Error Handling: Con-rmation/Rejection 849 
+24.3 VoiceXML ............................... 851
+24.4 Dialogue System Design and Evaluation . . . . . . . . . . . . . . . 854 
+24.4.1 DesigningDialogueSystems . . . . . . . . . . . . . . . . . 854 
+24.4.2 DialogueSystemEvaluation . . . . . . . . . . . . . . . . . 855 24.5 Information-state&DialogueActs . . . . . . . . . . . . . . . . . . 857 
+24.5.1 DialogueActs ........................ 859
+24.5.2 InterpretingDialogueActs .................. 860
+24.5.3 DetectingCorrectionActs .................. 862
+24.5.4 Generating Dialogue Acts: Con-rmation and Rejection . . . 863 
+24.6 Markov Decision Process Architecture . . . . . . . . . . . . . . . . 865 
+24.7 Advanced: Plan-based Dialogue Agents . . . . . . . . . . . . . . . 869 
+24.7.1 Plan-Inferential Interpretation and Production . . . . . . . . 869 
+24.7.2 The Intentional Structure of Dialogue . . . . . . . . . . . . 872 
+24.8 Summary................................ 874 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 875 Exercises ................................... 876 
+25 Machine Translation 879 
+25.1 WhyisMachineTranslationSoHard? . . . . . . . . . . . . . . . . 882 
+25.1.1 Typology ........................... 882
+25.1.2 OtherStructuralDivergences. . . . . . . . . . . . . . . . . 885 
+25.1.3 LexicalDivergences ..................... 885
+25.2 ClassicalMT&theVauquoisTriangle . . . . . . . . . . . . . . . . 887 
+25.2.1 DirectTranslation ...................... 887
+25.2.2 Transfer............................ 890
+25.2.3 Combining direct and tranfer approaches in classic MT . . . 892 
+25.2.4 The Interlingua Idea: Using Meaning . . . . . . . . . . . . 893 
+25.3 StatisticalMT ............................. 895
+25.4 P(F|E): the Phrase-Based Translation Model . . . . . . . . . . . . . 897 
+25.5 AlignmentinMT ........................... 900
+25.5.1 IBMModel1 ......................... 901
+25.5.2 HMMAlignment....................... 903
+25.6 TrainingAlignmentModels ...................... 905
+25.6.1 EM for Training Alignment Models . . . . . . . . . . . . . 906 
+25.7 Symmetrizing Alignments for Phrase-based MT . . . . . . . . . . . 908 
+25.8 Decoding for Phrase-Based Statistical MT . . . . . . . . . . . . . . 910 
+25.9 MTEvaluation............................. 914
+25.9.1 UsingHumanRaters ..................... 915
+25.9.2 AutomaticEvaluation:Bleu . . . . . . . . . . . . . . . . . 915 
+25.10 Advanced:SyntacticModelsforMT . . . . . . . . . . . . . . . . . 918 
+25.11 Advanced: IBM Model 3 for fertility-based alignment . . . . . . . . 920 
+25.11.1TrainingforModel3 ..................... 923
+25.12 Advanced:Log-linearModelsforMT . . . . . . . . . . . . . . . . 924 BibliographicalandHistoricalNotes . . . . . . . . . . . . . . . . . . . . . 925 Exercises ................................... 927 
+Bibliography 929 
+Index 981
+
+Library of Congress Subject Headings for this publication:
+
+Computational linguistics.
+Automatic speech recognition.
+</pre>
